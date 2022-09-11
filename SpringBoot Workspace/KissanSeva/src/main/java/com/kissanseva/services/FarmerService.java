@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.kissanseva.payloads.FarmerDto;
 
 
-@Service
+
 public interface FarmerService {
 	
 	FarmerDto createFarmer(FarmerDto farmerDto);
