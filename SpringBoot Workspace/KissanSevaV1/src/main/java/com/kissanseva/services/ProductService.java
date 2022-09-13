@@ -19,17 +19,17 @@ public interface ProductService {
 		void deleteProduct(Integer productId);
 		
 		//getAll
-		List<Product> getAllProduct();
+		List<ProductDto> getAllProduct();
 		
 		//getSingle
 		ProductDto getProductById(Integer productId);
 		
 		
 		//getAllPostByCategory
-		 List<Product> getAllProductByCrop(Integer cropId);
+		 List<ProductDto> getAllProductByCrop(Integer cropId);
 		 
 		 //getAllPostByUser
-		 List<Product> getAllProductByUser(Integer userId);
+		 List<ProductDto> getAllProductByUser(Integer userId);
 			 
 		 //search post
 		//List<Product> searchPost(String keyword);

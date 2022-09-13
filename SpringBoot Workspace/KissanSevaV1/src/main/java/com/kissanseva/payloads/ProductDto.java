@@ -17,6 +17,8 @@ import lombok.Setter;
 @Getter
 public class ProductDto {
 	
+	private int productId;
+	
 	
     private double quantity;
 	
