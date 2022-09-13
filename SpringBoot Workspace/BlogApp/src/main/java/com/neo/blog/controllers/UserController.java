@@ -1,7 +1,7 @@
 package com.neo.blog.controllers;
 
 import java.util.List;
-import java.util.Map;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +28,7 @@ public class UserController {
 	
 	//post - create user
 	@PostMapping("/")
-	public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto){
+	public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto){
 		//System.out.println("control here......");
 		UserDto createUserDto=this.userService.createUser(userDto);
 		
@@ -37,7 +37,7 @@ public class UserController {
 	
 	//put - update user
 	@PutMapping("/{userId}")
-	public ResponseEntity<UserDto>updateUser(@RequestBody UserDto userDto, @PathVariable Integer userId){
+	public ResponseEntity<UserDto>updateUser(@Valid @RequestBody UserDto userDto, @PathVariable Integer userId){
 		UserDto updatedUserDto = this.userService.updateUser(userDto, userId);
 		
 		return ResponseEntity.ok(updatedUserDto);

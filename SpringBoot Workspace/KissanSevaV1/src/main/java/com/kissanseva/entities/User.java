@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "farmers")
+@Table(name = "users")
 @NoArgsConstructor                       
 @Getter                                 
 @Setter
-public class Farmer {
+public class User {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int farmerId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int userId;
 	
 	private String  firstName;
 	
@@ -38,10 +38,5 @@ public class Farmer {
 	private String address;
 	
 	private String taluka;
-	
-//	@Column(columnDefinition = "LONGBLOB")
-//	private byte[] fileContent;
 
-	
-	
 }

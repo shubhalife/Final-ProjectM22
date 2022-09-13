@@ -1,5 +1,4 @@
-package com.neo.blog.exceptions;
-
+package com.kissanseva.exceptions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +10,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.neo.blog.payloads.ApiResponse;
+import com.kissanseva.payloads.ApiResponse;
+
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
